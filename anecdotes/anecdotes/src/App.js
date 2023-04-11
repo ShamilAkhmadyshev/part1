@@ -28,9 +28,9 @@ const App = () => {
   }
   console.log(points)
   console.log(selected)
-  const largest = Math.max.apply(Math, points)
+  const largest = Math.max(...points)
   console.log(largest)
-  const largestIndex = points.indexOf(Math.max(...points))
+  const largestIndex = points.indexOf(largest)
   const BestAnecdote = () => {
     if (largest <= 0) {
       return <h3>No best anecdote yet</h3>
